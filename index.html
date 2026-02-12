@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Surprise</title>
+    <title>Love Me Valentine</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="question-page">
-        <div class="question-container">
+    <div id="question-page" class="active-page">
+        <div class="question-container" id="main-container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueGZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute Bear" class="local-gif">
             <h1 class="question">Do you love me?</h1>
             <div class="button-container">
-                <button class="btn" onclick="showEnvelope()">Yes</button>
+                <button class="btn yes-btn" onclick="handleYes()">Yes</button>
                 <button class="btn no-btn" id="no-button">No</button>
             </div>
         </div>
     </div>
 
-    <div id="envelope-page" class="hidden">
-        <div class="night"></div>
-        <div class="wrapper">
-            <div class="lid one"></div>
-            <div class="lid two"></div>
-            <div class="envelope"></div>
-            <div class="letter">
-                <p>Iloveyouuu ❤️</p>
+    <div id="surprise-page" class="hidden">
+        <div class="night-sky"></div>
+        
+        <div class="envelope-wrapper">
+            <div class="envelope-lid"></div>
+            <div class="envelope-body"></div>
+            <div class="letter" id="valentine-letter">
+                <p>I knew it! ❤️<br>Happy Valentine's Day!</p>
             </div>
         </div>
-        <div class="flowers">
-            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Tulip.png" alt="Tulip">
+
+        <div class="flower-bouquet">
+            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Tulip.png" class="flower">
+            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Tulip.png" class="flower middle-tulip">
+            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Tulip.png" class="flower">
         </div>
-        <button id="openBtn" class="btn">Open</button>
+
+        <div class="nav-buttons">
+            <button class="btn open-btn" onclick="openLetter()">Open Letter</button>
+            <button class="btn back-btn" onclick="goBack()">Back</button>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
