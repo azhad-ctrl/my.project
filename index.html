@@ -5,52 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Me Valentine</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
     <audio id="bg-music" loop>
         <source src="komang.mp3.mp3" type="audio/mpeg">
     </audio>
 
-    <div id="question-page" class="active-page">
+    <div id="question-page" class="page active">
         <div class="question-container">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueGZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute Bear" class="local-gif">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueGZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Bear" class="bear-gif">
             <h1 class="question">Do you love me?</h1>
-            <div class="button-container">
+            <div class="btn-group">
                 <button class="btn yes-btn" onclick="handleYes()">Yes</button>
                 <button class="btn no-btn" id="no-button">No</button>
             </div>
         </div>
     </div>
 
-    <div id="surprise-page" class="hidden">
-        <div class="night"></div>
+    <div id="surprise-page" class="page hidden">
+        <div class="stars"></div>
         
-        <div class="wrapper">
-            <div class="lid one"></div>
-            <div class="lid two"></div>
-            <div class="envelope"></div>
-            <div class="letter" id="valentine-letter">
-                <p>I knew it! ❤️<br>Happy Valentine's Day!</p>
+        <div class="letter-section">
+            <div class="envelope-wrapper">
+                <div class="envelope"></div>
+                <div class="letter" id="valentine-letter">
+                    <div class="letter-content">
+                        <h2 id="letter-title"></h2>
+                        <p id="typewriter-text"></p>
+                        <span id="letter-sig" class="signature"></span>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="flower-bouquet">
-            <div class="flower-group">
-                <div class="f-leaf"></div>
-                <div class="f-petal"></div>
-            </div>
-            <div class="flower-group middle">
-                <div class="f-leaf"></div>
-                <div class="f-petal"></div>
-            </div>
-            <div class="flower-group">
-                <div class="f-leaf"></div>
-                <div class="f-petal"></div>
-            </div>
+            <div class="flower"><div class="petal"></div><div class="stem"></div></div>
+            <div class="flower middle"><div class="petal"></div><div class="stem"></div></div>
+            <div class="flower"><div class="petal"></div><div class="stem"></div></div>
         </div>
 
-        <div class="nav-buttons">
-            <button class="btn open-btn" onclick="openLetter()">Open</button>
+        <div class="control-panel">
+            <button id="main-action-btn" class="btn action-btn" onclick="openLetter()">Open Letter</button>
             <button class="btn back-btn" onclick="goBack()">Back</button>
         </div>
     </div>
@@ -58,4 +54,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
