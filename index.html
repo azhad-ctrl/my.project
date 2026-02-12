@@ -8,7 +8,7 @@
 </head>
 <body>
     <audio id="bg-music" loop>
-        <source src="https://www.mboxdrive.com/Raim%20Laode%20-%20Komang%20(Official%20Music%20Video).mp3" type="audio/mpeg">
+        <source src="komang.mp3" type="audio/mpeg">
     </audio>
 
     <div id="question-page" class="active-page">
@@ -23,24 +23,34 @@
     </div>
 
     <div id="surprise-page" class="hidden">
-        <div class="night-sky"></div>
+        <div class="night"></div>
         
-        <div class="envelope-wrapper">
-            <div class="envelope-lid"></div>
-            <div class="envelope-body"></div>
+        <div class="wrapper">
+            <div class="lid one"></div>
+            <div class="lid two"></div>
+            <div class="envelope"></div>
             <div class="letter" id="valentine-letter">
                 <p>I knew it! ❤️<br>Happy Valentine's Day!</p>
             </div>
         </div>
 
         <div class="flower-bouquet">
-            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Tulip.png" class="flower">
-            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Tulip.png" class="flower middle-tulip">
-            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Tulip.png" class="flower">
+            <div class="flower-group">
+                <div class="f-leaf"></div>
+                <div class="f-petal"></div>
+            </div>
+            <div class="flower-group middle">
+                <div class="f-leaf"></div>
+                <div class="f-petal"></div>
+            </div>
+            <div class="flower-group">
+                <div class="f-leaf"></div>
+                <div class="f-petal"></div>
+            </div>
         </div>
 
         <div class="nav-buttons">
-            <button class="btn open-btn" onclick="openLetter()">Open Letter</button>
+            <button class="btn open-btn" onclick="openLetter()">Open</button>
             <button class="btn back-btn" onclick="goBack()">Back</button>
         </div>
     </div>
