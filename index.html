@@ -1,66 +1,37 @@
-/* Previous styles remain, adding these: */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="question-page">
+        <div class="question-container">
+            <h1 class="question">Do you love me?</h1>
+            <div class="button-container">
+                <button class="btn" onclick="showEnvelope()">Yes</button>
+                <button class="btn no-btn" id="no-button">No</button>
+            </div>
+        </div>
+    </div>
 
-.hidden {
-    display: none;
-}
-
-.active-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#envelope-page {
-    position: relative;
-    display: none; /* Controlled by JS */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #0d1117;
-}
-
-/* Envelope Container */
-.wrapper {
-    position: relative;
-    width: 200px;
-    height: 150px;
-    background-color: #f08080; /* Pink envelope base */
-    margin-bottom: 20px;
-}
-
-.letter {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 180px;
-    height: 130px;
-    background-color: white;
-    text-align: center;
-    transition: 0.5s;
-    z-index: 1;
-}
-
-.envelope {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 75px solid transparent;
-    border-right: 100px solid #f4978e;
-    border-bottom: 75px solid #f4978e;
-    border-left: 100px solid #f4978e;
-    z-index: 2;
-}
-
-/* Flower animation */
-.flowers {
-    margin-top: 20px;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-}
+    <div id="envelope-page" class="hidden">
+        <div class="night"></div>
+        <div class="wrapper">
+            <div class="lid one"></div>
+            <div class="lid two"></div>
+            <div class="envelope"></div>
+            <div class="letter">
+                <p>Happy Valentine's Day! ❤️</p>
+            </div>
+        </div>
+        <div class="flowers">
+            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Tulip.png" alt="Tulip">
+        </div>
+        <button id="openBtn" class="btn">Open</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
