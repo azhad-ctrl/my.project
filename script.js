@@ -1,16 +1,23 @@
 const noBtn = document.getElementById('no-button');
 
+// Keep the "No" button moving
 noBtn.addEventListener('mouseover', () => {
-    // Calculate random coordinates within the screen
     const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
     const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
-
-    // Set the new position
     noBtn.style.left = `${x}px`;
     noBtn.style.top = `${y}px`;
 });
 
-function handleYes() {
-    alert("fuh finally ❤️");
-    // You can redirect to another page or change the text here
+// Function to switch from Question to Envelope
+function showEnvelope() {
+    document.getElementById('question-page').style.display = 'none';
+    const envelopePage = document.getElementById('envelope-page');
+    envelopePage.style.display = 'flex';
 }
+
+// Logic to "Open" the letter
+document.getElementById('openBtn').addEventListener('click', () => {
+    const letter = document.querySelector('.letter');
+    letter.style.transform = 'translateY(-100px)';
+    letter.style.zIndex = '3';
+});
